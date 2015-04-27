@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" >
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="description" content="" />
+<meta name="author" content="" />
+<!--[if IE]>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<![endif]-->
+<title>LIGHT WAVE</title>
+<!-- BOOTSTRAP CORE CSS -->
+<link href="../static/css/bootstrap.css" rel="stylesheet" />
+<!-- ION ICONS STYLES -->
+<link href="../static/css/ionicons.css" rel="stylesheet" />
+<!-- FONT AWESOME ICONS STYLES -->
+<link href="../static/css/font-awesome.css" rel="stylesheet" />
+<!-- FANCYBOX POPUP STYLES -->
+<link href="../static/js/source/jquery.fancybox.css" rel="stylesheet" />
+<!-- STYLES FOR VIEWPORT ANIMATION -->
+<link href="../static/css/animations.min.css" rel="stylesheet" />
+<!-- CUSTOM CSS -->
+<link href="../static/css/style-blue.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+
+<!-- HTML5 Shiv and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+<body data-spy="scroll" data-target="#menu-section">
+<!--MENU SECTION START-->
+<div class="navbar navbar-inverse navbar-fixed-top scroll-me" id="menu-section" >
+<div class="container">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="#">
+
+Around The Bases
+
+</a>
+</div>
+<div class="navbar-collapse collapse">
+<ul class="nav navbar-nav navbar-right">
+<li><a href="/">HOME</a></li>
+<li><a href="#services">Game Scores</a></li>
+<li><a href="#pricing">League Schedule</a></li>
+<li><a href="#work">AL Rosters</a></li>
+<li><a href="#team">NL Rosters</a></li>
+<li><a href="#grid">Standings</a></li>
+<li><a href="/apiresponse">League Leaders</a></li>
+</ul>
+</div>
+
+</div>
+</div>
+<!--SERVICE SECTION START-->
+<section id="services" >
+<div class="container">
+<div class="row text-center header">
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 animate-in" data-anim-type="fade-in-up">
+<h3> League Leaders </h3>
+<hr />
+</div>
+</div>
+<center>
+<section id="news" class="single-page scrollblock">
+      <div class="container">
+        <div class="align"><i class="icon-pencil-circled"></i></div>
+        <div class="row">
+          <div class="span12">
+            <div class="cform" id="theme-form">
+		<form action="/apiresponse" method='post'>
+<br>
+			<select name="year">
+				<option value="2013">2013</option>
+				<option value="2014">2014</option>
+				<option value="2015">2015</option>
+			</select>
+			<input type="submit" class="button4" value="Submit">
+		</form>
+	</center>
+
+		{%if pagedata%}
+		<form action="">
+			<div class="row">
+				<center><h1> MLB Home Run Leaders </h1></center>
+				<div class="col-xs-12 col-sm-4 col-md-4 col-lg-2">
+			<h4><label for="">Rank:</label>{{pagedata[1]['leagues'][0]['hitting']['home_runs']['players'][0]['rank']}}</h4>
+			<h4><label for="">First Name:</label>{{pagedata[1]['leagues'][0]['hitting']['home_runs']['players'][0]['first_name']}}</h4>
+			<h4><label for=""> Last Name:</label>{{pagedata[1]['leagues'][0]['hitting']['home_runs']['players'][0]['last_name']}}</h4>
+			<h4><label for="">Home Runs:</label>{{pagedata[1]['leagues'][0]['hitting']['home_runs']['players'][0]['hr']}}</h4>
+		</div>
+
+				<div class="col-xs-12 col-sm-4 col-md-4 col-lg-2">
+			<h4><label for="">Rank:</label>{{pagedata[1]['leagues'][0]['hitting']['home_runs']['players'][1]['rank']}}</h4>
+			<h4><label for="">First Name:</label>{{pagedata[1]['leagues'][0]['hitting']['home_runs']['players'][1]['first_name']}}</h4>
+			<h4><label for=""> Last Name:</label>{{pagedata[1]['leagues'][0]['hitting']['home_runs']['players'][1]['last_name']}}</h4>
+			<h4><label for="">Home Runs:</label>{{pagedata[1]['leagues'][0]['hitting']['home_runs']['players'][1]['hr']}}</h4>
+			</div>
+
+				<div class="col-xs-12 col-sm-4 col-md-4 col-lg-2">
+						<h4><label for="">Rank:</label>{{pagedata[1]['leagues'][0]['hitting']['home_runs']['players'][2]['rank']}}</h4>
+			<h4><label for="">First Name:</label>{{pagedata[1]['leagues'][0]['hitting']['home_runs']['players'][2]['first_name']}}</h4>
+			<h4><label for=""> Last Name:</label>{{pagedata[1]['leagues'][0]['hitting']['home_runs']['players'][2]['last_name']}}</h4>
+			<h4><label for="">Home Runs:</label>{{pagedata[1]['leagues'][0]['hitting']['home_runs']['players'][2]['hr']}}</h4>
+					</div>
+	
+
+				<div class="col-xs-12 col-sm-4 col-md-4 col-lg-2">
+						<h4><label for="">Rank:</label>{{pagedata[1]['leagues'][0]['hitting']['home_runs']['players'][3]['rank']}}</h4>
+			<h4><label for="">First Name:</label>{{pagedata[1]['leagues'][0]['hitting']['home_runs']['players'][3]['first_name']}}</h4>
+			<h4><label for=""> Last Name:</label>{{pagedata[1]['leagues'][0]['hitting']['home_runs']['players'][3]['last_name']}}</h4>
+			<h4><label for="">Home Runs:</label>{{pagedata[1]['leagues'][0]['hitting']['home_runs']['players'][3]['hr']}}</h4>
+					</div>
+
+
+				<div class="col-xs-12 col-sm-4 col-md-4 col-lg-2">
+						<h4><label for="">Rank:</label>{{pagedata[1]['leagues'][0]['hitting']['home_runs']['players'][4]['rank']}}</h4>
+			<h4><label for="">First Name:</label>{{pagedata[1]['leagues'][0]['hitting']['home_runs']['players'][4]['first_name']}}</h4>
+			<h4><label for=""> Last Name:</label>{{pagedata[1]['leagues'][0]['hitting']['home_runs']['players'][4]['last_name']}}</h4>
+			<h4><label for="">Home Runs:</label>{{pagedata[1]['leagues'][0]['hitting']['home_runs']['players'][4]['hr']}}</h4>
+					</div>
+
+			<div class="col-xs-12 col-sm-4 col-md-4 col-lg-2">
+						<h4><label for="">Rank:</label>{{pagedata[1]['leagues'][0]['hitting']['home_runs']['players'][5]['rank']}}</h4>
+			<h4><label for="">First Name:</label>{{pagedata[1]['leagues'][0]['hitting']['home_runs']['players'][5]['first_name']}}</h4>
+			<h4><label for=""> Last Name:</label>{{pagedata[1]['leagues'][0]['hitting']['home_runs']['players'][5]['last_name']}}</h4>
+			<h4><label for="">Home Runs:</label>{{pagedata[1]['leagues'][0]['hitting']['home_runs']['players'][5]['hr']}}</h4>
+					</div>
+	</div>
+			
+		</form>
+		{%endif%}
+            </div>
+        </div>
+        </div>
+        <br>
+
+    {%if pagedata%}
+		<form action="">
+			<div class="row">
+				<center><h1> NL West Standings </h1></center>
+				<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+			<h4><label for="">Market: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][0]['teams'][0]['market']}}</h4>
+			<h4><label for="">Name: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][0]['teams'][0]['name']}}</h4>
+			<h4><label for="">Games Won: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][0]['teams'][0]['win']}}</h4>
+			<h4><label for="">Games Lost: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][0]['teams'][0]['loss']}}</h4>
+
+		</div>
+		<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+			<h4><label for="">Market: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][0]['teams'][1]['market']}}</h4>
+			<h4><label for="">Name: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][0]['teams'][1]['name']}}</h4>
+			<h4><label for="">Games Won: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][0]['teams'][1]['win']}}</h4>
+			<h4><label for="">Games Lost: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][0]['teams'][1]['loss']}}</h4>
+
+		</div>
+		<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+			<h4><label for="">Market: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][0]['teams'][2]['market']}}</h4>
+			<h4><label for="">Name: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][0]['teams'][2]['name']}}</h4>
+			<h4><label for="">Games Won: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][0]['teams'][2]['win']}}</h4>
+			<h4><label for="">Games Lost: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][0]['teams'][2]['loss']}}</h4>
+
+		</div>
+		<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+			<h4><label for="">Market: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][0]['teams'][3]['market']}}</h4>
+			<h4><label for="">Name: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][0]['teams'][3]['name']}}</h4>
+			<h4><label for="">Games Won: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][0]['teams'][3]['win']}}</h4>
+			<h4><label for="">Games Lost: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][0]['teams'][3]['loss']}}</h4>
+
+		</div>
+	</div>
+			
+		</form>
+		{%endif%}
+            </div>
+        </div>
+        </div>
+        <br>
+
+    {%if pagedata%}
+		<form action="">
+			<div class="row">
+				<center><h1> NL Central Standings </h1></center>
+				<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+			<h4><label for="">Market: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][1]['teams'][0]['market']}}</h4>
+			<h4><label for="">Name: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][1]['teams'][0]['name']}}</h4>
+			<h4><label for="">Games Won: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][1]['teams'][0]['win']}}</h4>
+			<h4><label for="">Games Lost: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][1]['teams'][0]['loss']}}</h4>
+
+		</div>
+		<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+			<h4><label for="">Market: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][1]['teams'][1]['market']}}</h4>
+			<h4><label for="">Name: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][1]['teams'][1]['name']}}</h4>
+			<h4><label for="">Games Won: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][1]['teams'][1]['win']}}</h4>
+			<h4><label for="">Games Lost: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][1]['teams'][1]['loss']}}</h4>
+
+		</div>
+		<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+			<h4><label for="">Market: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][1]['teams'][2]['market']}}</h4>
+			<h4><label for="">Name: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][1]['teams'][2]['name']}}</h4>
+			<h4><label for="">Games Won: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][1]['teams'][2]['win']}}</h4>
+			<h4><label for="">Games Lost: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][1]['teams'][2]['loss']}}</h4>
+
+		</div>
+		<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+			<h4><label for="">Market: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][1]['teams'][3]['market']}}</h4>
+			<h4><label for="">Name: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][1]['teams'][3]['name']}}</h4>
+			<h4><label for="">Games Won: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][1]['teams'][3]['win']}}</h4>
+			<h4><label for="">Games Lost: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][1]['teams'][3]['loss']}}</h4>
+
+		</div>
+	</div>
+			
+		</form>
+		{%endif%}
+            </div>
+        </div>
+        </div>
+        <br>
+
+    {%if pagedata%}
+		<form action="">
+			<div class="row">
+				<center><h1> NL East Standings </h1></center>
+				<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+			<h4><label for="">Market: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][2]['teams'][0]['market']}}</h4>
+			<h4><label for="">Name: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][2]['teams'][0]['name']}}</h4>
+			<h4><label for="">Games Won: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][2]['teams'][0]['win']}}</h4>
+			<h4><label for="">Games Lost: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][2]['teams'][0]['loss']}}</h4>
+
+		</div>
+		<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+			<h4><label for="">Market: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][2]['teams'][1]['market']}}</h4>
+			<h4><label for="">Name: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][2]['teams'][1]['name']}}</h4>
+			<h4><label for="">Games Won: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][2]['teams'][1]['win']}}</h4>
+			<h4><label for="">Games Lost: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][2]['teams'][1]['loss']}}</h4>
+
+		</div>
+		<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+			<h4><label for="">Market: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][2]['teams'][2]['market']}}</h4>
+			<h4><label for="">Name: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][2]['teams'][2]['name']}}</h4>
+			<h4><label for="">Games Won: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][2]['teams'][2]['win']}}</h4>
+			<h4><label for="">Games Lost: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][2]['teams'][2]['loss']}}</h4>
+
+		</div>
+		<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+			<h4><label for="">Market: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][2]['teams'][3]['market']}}</h4>
+			<h4><label for="">Name: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][2]['teams'][3]['name']}}</h4>
+			<h4><label for="">Games Won: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][2]['teams'][3]['win']}}</h4>
+			<h4><label for="">Games Lost: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][2]['teams'][3]['loss']}}</h4>
+
+		</div>
+	</div>
+			
+		</form>
+		{%endif%}
+            </div>
+        </div>
+        </div>
+        <br>
+
+            {%if pagedata%}
+		<form action="">
+			<div class="row">
+				<center><h1> AL East Standings </h1></center>
+				<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+			<h4><label for="">Market: </label>{{pagedata[0]['league']['season']['leagues'][1]['divisions'][0]['teams'][0]['market']}}</h4>
+			<h4><label for="">Name: </label>{{pagedata[0]['league']['season']['leagues'][1]['divisions'][0]['teams'][0]['name']}}</h4>
+			<h4><label for="">Games Won: </label>{{pagedata[0]['league']['season']['leagues'][1]['divisions'][0]['teams'][0]['win']}}</h4>
+			<h4><label for="">Games Lost: </label>{{pagedata[0]['league']['season']['leagues'][1]['divisions'][0]['teams'][0]['loss']}}</h4>
+
+		</div>
+		<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+			<h4><label for="">Market: </label>{{pagedata[0]['league']['season']['leagues'][1]['divisions'][0]['teams'][1]['market']}}</h4>
+			<h4><label for="">Name: </label>{{pagedata[0]['league']['season']['leagues'][1]['divisions'][0]['teams'][1]['name']}}</h4>
+			<h4><label for="">Games Won: </label>{{pagedata[0]['league']['season']['leagues'][1]['divisions'][0]['teams'][1]['win']}}</h4>
+			<h4><label for="">Games Lost: </label>{{pagedata[0]['league']['season']['leagues'][1]['divisions'][0]['teams'][1]['loss']}}</h4>
+
+		</div>
+		<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+			<h4><label for="">Market: </label>{{pagedata[0]['league']['season']['leagues'][1]['divisions'][0]['teams'][2]['market']}}</h4>
+			<h4><label for="">Name: </label>{{pagedata[0]['league']['season']['leagues'][1]['divisions'][0]['teams'][2]['name']}}</h4>
+			<h4><label for="">Games Won: </label>{{pagedata[0]['league']['season']['leagues'][1]['divisions'][0]['teams'][2]['win']}}</h4>
+			<h4><label for="">Games Lost: </label>{{pagedata[0]['league']['season']['leagues'][1]['divisions'][0]['teams'][2]['loss']}}</h4>
+
+		</div>
+		<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+			<h4><label for="">Market: </label>{{pagedata[0]['league']['season']['leagues'][1]['divisions'][0]['teams'][3]['market']}}</h4>
+			<h4><label for="">Name: </label>{{pagedata[0]['league']['season']['leagues'][1]['divisions'][0]['teams'][3]['name']}}</h4>
+			<h4><label for="">Games Won: </label>{{pagedata[0]['league']['season']['leagues'][1]['divisions'][0]['teams'][3]['win']}}</h4>
+			<h4><label for="">Games Lost: </label>{{pagedata[0]['league']['season']['leagues'][1]['divisions'][0]['teams'][3]['loss']}}</h4>
+
+		</div>
+	</div>
+			
+		</form>
+		{%endif%}
+            </div>
+        </div>
+        </div>
+        <br>
+
+            {%if pagedata%}
+		<form action="">
+			<div class="row">
+				<center><h1> AL Central Standings </h1></center>
+				<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+			<h4><label for="">Market: </label>{{pagedata[0]['league']['season']['leagues'][1]['divisions'][1]['teams'][0]['market']}}</h4>
+			<h4><label for="">Name: </label>{{pagedata[0]['league']['season']['leagues'][1]['divisions'][1]['teams'][0]['name']}}</h4>
+			<h4><label for="">Games Won: </label>{{pagedata[0]['league']['season']['leagues'][1]['divisions'][1]['teams'][0]['win']}}</h4>
+			<h4><label for="">Games Lost: </label>{{pagedata[0]['league']['season']['leagues'][1]['divisions'][1]['teams'][0]['loss']}}</h4>
+
+		</div>
+		<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+			<h4><label for="">Market: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][1]['teams'][1]['market']}}</h4>
+			<h4><label for="">Name: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][1]['teams'][1]['name']}}</h4>
+			<h4><label for="">Games Won: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][1]['teams'][1]['win']}}</h4>
+			<h4><label for="">Games Lost: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][1]['teams'][1]['loss']}}</h4>
+
+		</div>
+		<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+			<h4><label for="">Market: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][1]['teams'][2]['market']}}</h4>
+			<h4><label for="">Name: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][1]['teams'][2]['name']}}</h4>
+			<h4><label for="">Games Won: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][1]['teams'][2]['win']}}</h4>
+			<h4><label for="">Games Lost: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][1]['teams'][2]['loss']}}</h4>
+
+		</div>
+		<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+			<h4><label for="">Market: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][1]['teams'][3]['market']}}</h4>
+			<h4><label for="">Name: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][1]['teams'][3]['name']}}</h4>
+			<h4><label for="">Games Won: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][1]['teams'][3]['win']}}</h4>
+			<h4><label for="">Games Lost: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][1]['teams'][3]['loss']}}</h4>
+
+		</div>
+	</div>
+			
+		</form>
+		{%endif%}
+            </div>
+        </div>
+        </div>
+        <br>
+
+            {%if pagedata%}
+		<form action="">
+			<div class="row">
+				<center><h1> AL West Standings </h1></center>
+				<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+			<h4><label for="">Market: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][2]['teams'][0]['market']}}</h4>
+			<h4><label for="">Name: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][2]['teams'][0]['name']}}</h4>
+			<h4><label for="">Games Won: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][2]['teams'][0]['win']}}</h4>
+			<h4><label for="">Games Lost: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][2]['teams'][0]['loss']}}</h4>
+
+		</div>
+		<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+			<h4><label for="">Market: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][2]['teams'][1]['market']}}</h4>
+			<h4><label for="">Name: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][2]['teams'][1]['name']}}</h4>
+			<h4><label for="">Games Won: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][2]['teams'][1]['win']}}</h4>
+			<h4><label for="">Games Lost: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][2]['teams'][1]['loss']}}</h4>
+
+		</div>
+		<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+			<h4><label for="">Market: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][2]['teams'][2]['market']}}</h4>
+			<h4><label for="">Name: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][2]['teams'][2]['name']}}</h4>
+			<h4><label for="">Games Won: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][2]['teams'][2]['win']}}</h4>
+			<h4><label for="">Games Lost: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][2]['teams'][2]['loss']}}</h4>
+
+		</div>
+		<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+			<h4><label for="">Market: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][2]['teams'][3]['market']}}</h4>
+			<h4><label for="">Name: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][2]['teams'][3]['name']}}</h4>
+			<h4><label for="">Games Won: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][2]['teams'][3]['win']}}</h4>
+			<h4><label for="">Games Lost: </label>{{pagedata[0]['league']['season']['leagues'][0]['divisions'][2]['teams'][3]['loss']}}</h4>
+
+		</div>
+	</div>
+			
+		</form>
+		{%endif%}
+            </div>
+        </div>
+        </div>
+        <br>
+
+
+
+    </section>
+
+
+
+
+		<!-- JAVASCRIPT FILES PLACED AT THE BOTTOM TO REDUCE THE LOADING TIME -->
+<!-- CORE JQUERY -->
+<script src="static/js/jquery-1.11.1.js"></script>
+<!-- BOOTSTRAP SCRIPTS -->
+<script src="static/js/bootstrap.js"></script>
+<!-- EASING SCROLL SCRIPTS PLUGIN -->
+<script src="static/js/vegas/jquery.vegas.min.js"></script>
+<!-- VEGAS SLIDESHOW SCRIPTS -->
+<script src="static/js/jquery.easing.min.js"></script>
+<!-- FANCYBOX PLUGIN -->
+<script src="static/js/source/jquery.fancybox.js"></script>
+<!-- ISOTOPE SCRIPTS -->
+<script src="static/js/jquery.isotope.js"></script>
+<!-- VIEWPORT ANIMATION SCRIPTS   -->
+<script src="static/js/appear.min.js"></script>
+<script src="static/js/animations.min.js"></script>
+<!-- CUSTOM SCRIPTS -->
+<script src="static/js/custom.js"></script>
+
+<script type="text/javascript" src="static/js/script.js"></script>
+
+<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+	</body>
+</html>

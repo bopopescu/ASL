@@ -1,0 +1,194 @@
+html,body {
+  background-image: url("/static/img/loginbg.jpg");
+  background-repeat:no-repeat;
+  background-position:center;
+}
+
+#topbar{
+   position:fixed;
+   top:0;
+   left:0;
+   width:100%;
+   height:60px;
+   background-color:black;
+}
+
+h1 {
+  color: black;
+}
+
+p {
+  color: white;
+}
+
+label {
+  color: white;
+  margin: 4% 0 2% 0;
+}
+
+input {
+  margin: 2% 0 0 0;
+}
+
+form {
+  margin: 0 0 0 29%;
+}
+
+.loginform {
+  margin-top: 35%;
+}
+
+.container {
+  margin-top: 15%;
+}
+
+.donthaveaccount {
+  margin-top: 50%;
+}
+
+/* Buttons */
+
+#submit {
+  margin-top: 5%;
+  margin-left: 40%;
+}
+
+#login {
+  margin-left: 17%;
+  margin-top: 5%;
+}
+
+#register {
+  margin-left: 39%;
+  margin-top: 5%;
+}
+
+#gamescoresbtn {
+  width: 60%;
+  margin: 5% 0 0 20%;
+  background: #3498db;
+    border-radius: 28px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 3% 3% 3% 3%;
+  text-decoration: none;
+}
+
+#scheduledgamesbtn {
+  width: 60%;
+  margin: 5% 0 0 20%;
+  background: #3498db;
+    border-radius: 28px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 3% 3% 3% 3%;
+  text-decoration: none;
+}
+
+#alrostersbtn {
+  width: 60%;
+  margin: 5% 0 0 20%;
+  background: #3498db;
+    border-radius: 28px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 3% 3% 3% 3%;
+  text-decoration: none;
+}
+
+#nlrostersbtn {
+  width: 60%;
+  margin: 5% 0 0 20%;
+  background: #3498db;
+    border-radius: 28px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 3% 3% 3% 3%;
+  text-decoration: none;
+}
+
+#standingsbtn {
+  width: 60%;
+  margin: 5% 0 0 20%;
+  background: #3498db;
+    border-radius: 28px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 3% 3% 3% 3%;
+  text-decoration: none;
+}
+
+#leagueleadersbtn {
+  width: 60%;
+  margin: 5% 0 0 20%;
+  background: #3498db;
+    border-radius: 28px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 3% 3% 3% 3%;
+  text-decoration: none;
+}
+
+@media only screen and (min-width : 1024px) {
+  #topbar {
+    background-color: blue;
+  }
+}
+
+@media only screen and (min-width : 480px) and (max-width : 1024px) {
+  #topbar {
+    background-color: purple;
+  }
+
+}
+
+@media only screen and (max-width : 480px) {
+  #topbar {
+    background-color: green;
+  }
+
+  h2 {
+    font-size: 2em;
+    color: white;
+    float: right;
+    margin: 5% 3% 0 0;
+  }
+
+  #gamescoreheader {
+    float: left;
+    margin: 3% 0 0 20%;
+  }
+
+  .teamname {
+    color: black;
+    padding-top: 4%;
+    padding-left: 10%;
+
+  }
+
+  #container {
+    margin: 25% 0 0 0;
+  }
+
+  #logout {
+    color: white;
+  }
+
+  .game1 {
+    height: 100px;
+    background-color: lightgrey;
+    border-radius: 7px;
+  }
+
+  #loginform {
+    margin-top: 20%;
+  }
+
+
+}

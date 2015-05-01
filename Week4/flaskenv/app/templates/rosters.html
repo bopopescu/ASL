@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" >
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="description" content="" />
+<meta name="author" content="" />
+<!--[if IE]>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<![endif]-->
+<title>Scheduled Games </title>
+<!-- BOOTSTRAP CORE CSS -->
+<link href="../static/css/bootstrap.css" rel="stylesheet" />
+<!-- ION ICONS STYLES -->
+<link href="../static/css/ionicons.css" rel="stylesheet" />
+<!-- FONT AWESOME ICONS STYLES -->
+<link href="../static/css/font-awesome.css" rel="stylesheet" />
+<!-- FANCYBOX POPUP STYLES -->
+<link href="../static/js/source/jquery.fancybox.css" rel="stylesheet" />
+<!-- STYLES FOR VIEWPORT ANIMATION -->
+<link href="../static/css/animations.min.css" rel="stylesheet" />
+<!-- CUSTOM CSS -->
+<link href="../static/css/style-blue.css" rel="stylesheet" />
+
+<!-- HTML5 Shiv and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+<body data-spy="scroll" data-target="#menu-section">
+<!--MENU SECTION START-->
+<div class="navbar navbar-inverse navbar-fixed-top scroll-me" id="menu-section" >
+<div class="container">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="#">
+
+Around The Bases
+
+</a>
+</div>
+<div class="navbar-collapse collapse">
+<ul class="nav navbar-nav navbar-right">
+<li><a href="/">HOME</a></li>
+<li><a href="#services">Game Scores</a></li>
+<li><a href="#pricing">League Schedule</a></li>
+<li><a href="/apirosters">Scheduled Games</a></li>
+<li><a href="#team">Rosters</a></li>
+<li><a href="#grid">Standings</a></li>
+<li><a href="/apiresponse">League Leaders</a></li>
+</ul>
+</div>
+
+</div>
+</div>
+<!--SERVICE SECTION START-->
+<section id="services" >
+<div class="container">
+<div class="row text-center header">
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 animate-in" data-anim-type="fade-in-up">
+<h3> MLB Schedule </h3>
+<hr />
+</div>
+</div>
+<center>
+<section id="news" class="single-page scrollblock">
+      <div class="container">
+        <div class="align"><i class="icon-pencil-circled"></i></div>
+        <div class="row">
+          <div class="span12">
+            <div class="cform" id="theme-form">
+		<form action="/rostersresponse" method='post'>
+			<br>
+			<select name="day">
+				<option value="30">30</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+			</select>
+			<select name="month">
+				<option value="04">04</option>
+				<option value="05">05</option>
+				<option value="06">06</option>
+			</select>
+			<select name="year">
+				<option value="2015">2015</option>
+				<option value="2016">2016</option>
+				<option value="2017">2017</option>
+			</select>
+			<input type="submit" class="button4" value="Submit">
+		</form>
+	</center>
+</div>
+
+		{%if pagedata%}
+		<form action="">
+			<div class="row">
+				<center><h1> MLB Schedule </h1></center>
+				<div class="col-xs-12 col-sm-4 col-md-4 col-lg-3">
+			<h4> Game 1 <h4>
+			<h4><label for=""></label>{{pagedata[0]['league']['games'][0]['home']['name']}} vs {{pagedata[0]['league']['games'][0]['away']['name']}}</h4>
+
+			<h4><label for="">Network: </label> {{pagedata[0]['league']['games'][0]['broadcast']['network']}} </h4>
+
+			<h4><label for=""> Capacity: </label> {{pagedata[1]['venues'][33]['capacity']}} </h4>
+
+			<h4><label for="">Location: </label> {{pagedata[1]['venues'][33]['name']}} <br> 
+				{{pagedata[1]['venues'][33]['address']}}, {{pagedata[1]['venues'][33]['city']}}, {{pagedata[1]['venues'][33]['state']}},
+				{{pagedata[1]['venues'][33]['zip']}}, {{pagedata[1]['venues'][33]['country']}}
+			</h4>
+
+
+
+			
+				</div>
+
+			<div class="col-xs-12 col-sm-4 col-md-4 col-lg-3">
+			<h4> Game 2 <h4>
+			<h4><label for=""></label>{{pagedata[0]['league']['games'][1]['home']['name']}} vs {{pagedata[0]['league']['games'][1]['away']['name']}}</h4>
+
+			<h4><label for="">Network: </label> {{pagedata[0]['league']['games'][1]['broadcast']['network']}} </h4>
+
+			<h4><label for=""> Capacity: </label> {{pagedata[1]['venues'][42]['capacity']}} </h4>
+
+			<h4><label for="">Location: </label> {{pagedata[1]['venues'][42]['name']}} <br> 
+				{{pagedata[1]['venues'][42]['address']}}, {{pagedata[1]['venues'][42]['city']}}, {{pagedata[1]['venues'][42]['state']}},
+				{{pagedata[1]['venues'][42]['zip']}}, {{pagedata[1]['venues'][42]['country']}}
+			</h4>
+			
+			
+
+
+			
+				</div>
+
+							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-3">
+			<h4> Game 3 <h4>
+			<h4><label for=""></label>{{pagedata[0]['league']['games'][2]['home']['name']}} vs {{pagedata[0]['league']['games'][2]['away']['name']}}</h4>
+
+			<h4><label for="">Network: </label> {{pagedata[0]['league']['games'][2]['broadcast']['network']}} </h4>
+
+			<h4><label for=""> Capacity: </label> {{pagedata[1]['venues'][7]['capacity']}} </h4>
+
+			<h4><label for="">Location: </label> {{pagedata[1]['venues'][7]['name']}} <br> 
+				{{pagedata[1]['venues'][7]['address']}}, {{pagedata[1]['venues'][7]['city']}}, {{pagedata[1]['venues'][7]['state']}},
+				{{pagedata[1]['venues'][7]['zip']}}, {{pagedata[1]['venues'][7]['country']}}
+			</h4>
+			
+		
+
+
+			
+				</div>
+
+							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-3">
+			<h4> Game 4 <h4>
+			<h4><label for=""></label>{{pagedata[0]['league']['games'][3]['home']['name']}} vs {{pagedata[0]['league']['games'][3]['away']['name']}}</h4>
+
+			<h4><label for="">Network: </label> {{pagedata[0]['league']['games'][3]['broadcast']['network']}} </h4>
+
+			<h4><label for=""> Capacity: </label> {{pagedata[1]['venues'][64]['capacity']}} </h4>
+
+			<h4><label for="">Location: </label> {{pagedata[1]['venues'][64]['name']}} <br> 
+				{{pagedata[1]['venues'][64]['address']}}, {{pagedata[1]['venues'][64]['city']}}, {{pagedata[1]['venues'][64]['state']}},
+				{{pagedata[1]['venues'][64]['zip']}}, {{pagedata[1]['venues'][64]['country']}}
+			</h4>
+			
+		
+
+
+			
+				</div>
+			</div>
+
+			<div class="row">
+
+							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-3">
+			<h4> Game 5 <h4>
+			<h4><label for=""></label>{{pagedata[0]['league']['games'][4]['home']['name']}} vs {{pagedata[0]['league']['games'][4]['away']['name']}}</h4>
+
+			<h4><label for="">Network: </label> {{pagedata[0]['league']['games'][4]['broadcast']['network']}} </h4>
+
+			<h4><label for=""> Capacity: </label> {{pagedata[1]['venues'][1]['capacity']}} </h4>
+
+			<h4><label for="">Location: </label> {{pagedata[1]['venues'][1]['name']}} <br> 
+				{{pagedata[1]['venues'][1]['address']}}, {{pagedata[1]['venues'][1]['city']}}, {{pagedata[1]['venues'][1]['state']}},
+				{{pagedata[1]['venues'][1]['zip']}}, {{pagedata[1]['venues'][1]['country']}}
+			</h4>
+			
+
+
+
+			
+				</div>
+
+							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-3">
+			<h4> Game 6 <h4>
+			<h4><label for=""></label>{{pagedata[0]['league']['games'][5]['home']['name']}} vs {{pagedata[0]['league']['games'][5]['away']['name']}}</h4>
+
+			<h4><label for="">Network: </label> {{pagedata[0]['league']['games'][5]['broadcast']['network']}} </h4>
+
+			<h4><label for=""> Capacity: </label> {{pagedata[1]['venues'][9]['capacity']}} </h4>
+
+			<h4><label for="">Location: </label> {{pagedata[1]['venues'][9]['name']}} <br> 
+				{{pagedata[1]['venues'][9]['address']}}, {{pagedata[1]['venues'][9]['city']}}, {{pagedata[1]['venues'][9]['state']}},
+				{{pagedata[1]['venues'][9]['zip']}}, {{pagedata[1]['venues'][9]['country']}}
+			</h4>
+			
+
+
+
+			
+				</div>
+
+							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-3">
+			<h4> Game 7 <h4>
+			<h4><label for=""></label>{{pagedata[0]['league']['games'][6]['home']['name']}} vs {{pagedata[0]['league']['games'][6]['away']['name']}}</h4>
+
+			<h4><label for="">Network: </label> {{pagedata[0]['league']['games'][6]['broadcast']['network']}} </h4>
+
+						<h4><label for=""> Capacity: </label> {{pagedata[1]['venues'][22]['capacity']}} </h4>
+
+			<h4><label for="">Location: </label> {{pagedata[1]['venues'][22]['name']}} <br> 
+				{{pagedata[1]['venues'][22]['address']}}, {{pagedata[1]['venues'][22]['city']}}, {{pagedata[1]['venues'][22]['state']}},
+				{{pagedata[1]['venues'][22]['zip']}}, {{pagedata[1]['venues'][22]['country']}}
+			</h4>
+			
+
+
+			
+				</div>
+
+							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-3">
+			<h4> Game 8 <h4>
+			<h4><label for=""></label>{{pagedata[0]['league']['games'][7]['home']['name']}} vs {{pagedata[0]['league']['games'][7]['away']['name']}}</h4>
+
+			<h4><label for="">Network: </label> {{pagedata[0]['league']['games'][7]['broadcast']['network']}} </h4>
+
+			<h4><label for=""> Capacity: </label> {{pagedata[1]['venues'][13]['capacity']}} </h4>
+
+			<h4><label for="">Location: </label> {{pagedata[1]['venues'][13]['name']}} <br> 
+				{{pagedata[1]['venues'][13]['address']}}, {{pagedata[1]['venues'][13]['city']}}, {{pagedata[1]['venues'][13]['state']}},
+				{{pagedata[1]['venues'][13]['zip']}}, {{pagedata[1]['venues'][13]['country']}}
+			</h4>
+			
+
+
+
+
+			
+				</div>
+			</div>	
+		</form>
+		{%endif%}
+        <br>
+    </div>
+</div>
+</div>
+</section>
+
+
+	</body>
+</html>
